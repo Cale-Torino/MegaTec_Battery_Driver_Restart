@@ -1,0 +1,7 @@
+﻿
+Run as admin in order to control drivers.
+
+enable disable driver.
+
+TODO:
+toggle enable/disable
