@@ -14,12 +14,32 @@ namespace MegaTecBattDriverRestart
 
         static void Start()
         {
-           //EnableMouse(true);
-           //EnableMouse(false);
-           EnableMegatecUPSBattery(false);
+            //EnableMouse(true);
+            //EnableMouse(false);
+            //Disab();
+            //DisableorEnable(true);
+            Toggle();
         }
 
-        public static void EnableMegatecUPSBattery(bool enable)
+        public static void Toggle()
+        {
+            // every type of device has a hard-coded GUID, this is the one for MegaTEC battery UPS
+            Guid classGuid = new Guid("{745a17a0-74d3-11d0-b6fe-00a0c90f57da}");
+
+            // get this from the properties dialog box of this device in Device Manager
+            string instanceId = @"HID\VID_0001&PID_0000\6&7EFA158&0&0000";
+            //string instanceId = @"VID_0001&PID_0000";
+
+            DeviceHelper2.ToggleDeviceEnabled(classGuid, instanceId);
+        }
+
+        public static void Disab()
+        {
+            string instanceId = @"VID_0001&PID_0000";
+            DisableHardwareClass.EnableDevice(n => n.ToUpperInvariant().Contains(instanceId), true);
+        }
+
+        public static void DisableorEnable(bool enable)
         {
             // every type of device has a hard-coded GUID, this is the one for MegaTEC battery UPS
             Guid classGuid = new Guid("{745a17a0-74d3-11d0-b6fe-00a0c90f57da}");
@@ -27,7 +47,6 @@ namespace MegaTecBattDriverRestart
             // get this from the properties dialog box of this device in Device Manager
             string instanceId = @"HID\VID_0001&PID_0000\6&7EFA158&0&0000";
 
-            //DeviceHelper2.ToggleDeviceEnabled(classGuid, instanceId);
             DeviceHelper.SetDeviceEnabled(classGuid, instanceId, enable);
         }
 

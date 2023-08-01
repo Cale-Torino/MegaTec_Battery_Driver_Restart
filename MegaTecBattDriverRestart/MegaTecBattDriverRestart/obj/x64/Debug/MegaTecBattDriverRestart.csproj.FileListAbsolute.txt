@@ -1,0 +1,8 @@
+C:\Users\User501\Documents\GitHub\MegaTec_Battery_Driver_Restart\MegaTecBattDriverRestart\MegaTecBattDriverRestart\bin\x64\Debug\MegaTecBattDriverRestart.exe.config
+C:\Users\User501\Documents\GitHub\MegaTec_Battery_Driver_Restart\MegaTecBattDriverRestart\MegaTecBattDriverRestart\bin\x64\Debug\MegaTecBattDriverRestart.exe
+C:\Users\User501\Documents\GitHub\MegaTec_Battery_Driver_Restart\MegaTecBattDriverRestart\MegaTecBattDriverRestart\bin\x64\Debug\MegaTecBattDriverRestart.pdb
+C:\Users\User501\Documents\GitHub\MegaTec_Battery_Driver_Restart\MegaTecBattDriverRestart\MegaTecBattDriverRestart\obj\x64\Debug\MegaTecBattDriverRestart.csproj.AssemblyReference.cache
+C:\Users\User501\Documents\GitHub\MegaTec_Battery_Driver_Restart\MegaTecBattDriverRestart\MegaTecBattDriverRestart\obj\x64\Debug\MegaTecBattDriverRestart.csproj.SuggestedBindingRedirects.cache
+C:\Users\User501\Documents\GitHub\MegaTec_Battery_Driver_Restart\MegaTecBattDriverRestart\MegaTecBattDriverRestart\obj\x64\Debug\MegaTecBattDriverRestart.csproj.CoreCompileInputs.cache
+C:\Users\User501\Documents\GitHub\MegaTec_Battery_Driver_Restart\MegaTecBattDriverRestart\MegaTecBattDriverRestart\obj\x64\Debug\MegaTecBattDriverRestart.exe
+C:\Users\User501\Documents\GitHub\MegaTec_Battery_Driver_Restart\MegaTecBattDriverRestart\MegaTecBattDriverRestart\obj\x64\Debug\MegaTecBattDriverRestart.pdb
