@@ -1,8 +1,0 @@
-C:\Users\User501\source\repos\MegaTecBattDriverRestart\MegaTecBattDriverRestart\bin\Debug\MegaTecBattDriverRestart.exe.config
-C:\Users\User501\source\repos\MegaTecBattDriverRestart\MegaTecBattDriverRestart\bin\Debug\MegaTecBattDriverRestart.exe
-C:\Users\User501\source\repos\MegaTecBattDriverRestart\MegaTecBattDriverRestart\bin\Debug\MegaTecBattDriverRestart.pdb
-C:\Users\User501\source\repos\MegaTecBattDriverRestart\MegaTecBattDriverRestart\obj\Debug\MegaTecBattDriverRestart.csproj.AssemblyReference.cache
-C:\Users\User501\source\repos\MegaTecBattDriverRestart\MegaTecBattDriverRestart\obj\Debug\MegaTecBattDriverRestart.csproj.SuggestedBindingRedirects.cache
-C:\Users\User501\source\repos\MegaTecBattDriverRestart\MegaTecBattDriverRestart\obj\Debug\MegaTecBattDriverRestart.csproj.CoreCompileInputs.cache
-C:\Users\User501\source\repos\MegaTecBattDriverRestart\MegaTecBattDriverRestart\obj\Debug\MegaTecBattDriverRestart.exe
-C:\Users\User501\source\repos\MegaTecBattDriverRestart\MegaTecBattDriverRestart\obj\Debug\MegaTecBattDriverRestart.pdb
