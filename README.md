@@ -1,5 +1,7 @@
 # MegaTec Battery Driver Restart
 
+[<img src="img/4.jpg" width="500"/>](img/4.jpg)
+
 This application was made for the old **MegaTec UPS** devices that use the *UPSilion* software.
 
 Using Windows 11 with the UPSilion software works however every time the PC boots up 
