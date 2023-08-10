@@ -322,7 +322,14 @@ ref PropertyChangeParameters classInstallParams, int classInstallParamsSize);
                         result = NativeMethods.SetupDiGetDeviceInstanceId(handle.DangerousGetHandle(), ref diData[index], sb, sb.Capacity, out requiredSize);
                     }
                     if (result == false)
-                        throw new Win32Exception();
+                    {
+                        Win32Exception ex = new Win32Exception();
+                        LoggerClass.WriteLine($" *** Win32Exception: {ex.Message} [DisableDevice] ***");
+                        Console.WriteLine(ex.Message);
+                        ErrorClass.Error = true;
+                        ErrorClass.ErrorCode = ex.ErrorCode;
+                        PauseClass.Pause();
+                    }
                     if (instanceId.Equals(sb.ToString()))
                     {
                         return index;
@@ -351,17 +358,51 @@ ref PropertyChangeParameters classInstallParams, int classInstallParamsSize);
                 }
 
                 bool result = NativeMethods.SetupDiSetClassInstallParams(handle, ref diData, ref @params, Marshal.SizeOf(@params));
-                if (result == false) throw new Win32Exception();
+                if (result == false)
+                {
+                    //throw new Win32Exception().Message;
+                    Win32Exception ex = new Win32Exception();
+                    LoggerClass.WriteLine($" *** Win32Exception: {ex.Message} [DisableDevice] ***");
+                    Console.WriteLine(ex.Message);
+                    ErrorClass.Error = true;
+                    ErrorClass.ErrorCode = ex.ErrorCode;
+                    PauseClass.Pause();
+                }
+
                 result = NativeMethods.SetupDiCallClassInstaller(DiFunction.PropertyChange, handle, ref diData);
                 if (result == false)
                 {
                     int err = Marshal.GetLastWin32Error();
                     if (err == (int)SetupApiError.NotDisableable)
-                        throw new ArgumentException("Device can't be disabled (programmatically or in Device Manager).");
+                    {
+                        //throw new ArgumentException("Device can't be disabled (programmatically or in Device Manager).");
+                        ArgumentException ex = new ArgumentException("Device can't be disabled (programmatically or in Device Manager).");
+                        LoggerClass.WriteLine($" *** Win32Exception: {ex.Message} [DisableDevice] ***");
+                        Console.WriteLine(ex.Message);
+                        ErrorClass.Error = true;
+                        ErrorClass.ErrorCode = err;
+                        PauseClass.Pause();
+                    }
                     else if (err >= (int)SetupApiError.NoAssociatedClass && err <= (int)SetupApiError.OnlyValidateViaAuthenticode)
-                        throw new Win32Exception("SetupAPI error: " + ((SetupApiError)err).ToString());
+                    {
+                        //throw new Win32Exception("SetupAPI error: " + ((SetupApiError)err).ToString());
+                        Win32Exception ex = new Win32Exception("SetupAPI error: " + ((SetupApiError)err).ToString());
+                        LoggerClass.WriteLine($" *** Win32Exception: {ex.Message} [DisableDevice] ***");
+                        Console.WriteLine(ex.Message);
+                        ErrorClass.Error = true;
+                        ErrorClass.ErrorCode = err;
+                        PauseClass.Pause();
+                    }
                     else
-                        throw new Win32Exception();
+                    {
+                        //throw new Win32Exception().Message;
+                        Win32Exception ex = new Win32Exception();
+                        LoggerClass.WriteLine($" *** Win32Exception: {ex.Message} [DisableDevice] ***");
+                        Console.WriteLine(ex.Message);
+                        ErrorClass.Error = true;
+                        ErrorClass.ErrorCode = err;
+                        PauseClass.Pause();
+                    }
                 }
             }
         }

@@ -57,6 +57,9 @@
     <Compile Include="Classes\DriverControl\DisableDevice.cs" />
     <Compile Include="Classes\DriverControl\DisableDevice2.cs" />
     <Compile Include="Classes\DriverControl\DisableHardwareClass.cs" />
+    <Compile Include="Classes\Logs\LoggerClass.cs" />
+    <Compile Include="Classes\ErrorClass.cs" />
+    <Compile Include="Classes\PauseClass.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -68,7 +71,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="TextFile1.txt" />
+    <Content Include="TextFiles\TextFile1.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

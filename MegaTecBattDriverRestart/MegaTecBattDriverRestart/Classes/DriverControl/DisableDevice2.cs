@@ -279,8 +279,11 @@ ref PropertyChangeParameters classInstallParams, int classInstallParamsSize);
                     {
                         //throw new Win32Exception().Message;
                         Win32Exception ex = new Win32Exception();
+                        LoggerClass.WriteLine($" *** Win32Exception: {ex.Message} [DisableDevice2] ***");
                         Console.WriteLine(ex.Message);
-                        Console.ReadKey();
+                        ErrorClass.Error = true;
+                        ErrorClass.ErrorCode = ex.ErrorCode;
+                        PauseClass.Pause();
                     }
 
                     // devNodeStatus now contains status bit flags: any combination of the DN_- prefixed bit flags defined in Cfg.h.
@@ -360,8 +363,11 @@ ref PropertyChangeParameters classInstallParams, int classInstallParamsSize);
                     { 
                         //throw new Win32Exception().Message;
                         Win32Exception ex = new Win32Exception();
+                        LoggerClass.WriteLine($" *** Win32Exception: {ex.Message} [DisableDevice2] ***");
                         Console.WriteLine(ex.Message);
-                        Console.ReadKey();
+                        ErrorClass.Error = true;
+                        ErrorClass.ErrorCode = ex.ErrorCode;
+                        PauseClass.Pause();
                     }
                     if (instanceId.Equals(sb.ToString()))
                     {
@@ -395,8 +401,11 @@ ref PropertyChangeParameters classInstallParams, int classInstallParamsSize);
                 {
                     //throw new Win32Exception().Message;
                     Win32Exception ex = new Win32Exception();
+                    LoggerClass.WriteLine($" *** Win32Exception: {ex.Message} [DisableDevice2] ***");
                     Console.WriteLine(ex.Message);
-                    Console.ReadKey();
+                    ErrorClass.Error = true;
+                    ErrorClass.ErrorCode = ex.ErrorCode;
+                    PauseClass.Pause();
                 }
                 result = NativeMethods.SetupDiCallClassInstaller(DiFunction.PropertyChange, handle, ref diData);
                 if (result == false)
@@ -406,22 +415,31 @@ ref PropertyChangeParameters classInstallParams, int classInstallParamsSize);
                     {
                         //throw new ArgumentException("Device can't be disabled (programmatically or in Device Manager).");
                         ArgumentException ex = new ArgumentException("Device can't be disabled (programmatically or in Device Manager).");
+                        LoggerClass.WriteLine($" *** Win32Exception: {ex.Message} [DisableDevice2] ***");
                         Console.WriteLine(ex.Message);
-                        Console.ReadKey();
+                        ErrorClass.Error = true;
+                        ErrorClass.ErrorCode = err;
+                        PauseClass.Pause();
                     }
                     else if (err >= (int)SetupApiError.NoAssociatedClass && err <= (int)SetupApiError.OnlyValidateViaAuthenticode)
                     {
                         //throw new Win32Exception("SetupAPI error: " + ((SetupApiError)err).ToString());
                         Win32Exception ex = new Win32Exception("SetupAPI error: " + ((SetupApiError)err).ToString());
+                        LoggerClass.WriteLine($" *** Win32Exception: {ex.Message} [DisableDevice2] ***");
                         Console.WriteLine(ex.Message);
-                        Console.ReadKey();
+                        ErrorClass.Error = true;
+                        ErrorClass.ErrorCode = err;
+                        PauseClass.Pause();
                     }
                     else
                     {
                         //throw new Win32Exception().Message;
                         Win32Exception ex = new Win32Exception();
+                        LoggerClass.WriteLine($" *** Win32Exception: {ex.Message} [DisableDevice2] ***");
                         Console.WriteLine(ex.Message);
-                        Console.ReadKey();
+                        ErrorClass.Error = true;
+                        ErrorClass.ErrorCode = err;
+                        PauseClass.Pause();
                     }
                 }
             }
