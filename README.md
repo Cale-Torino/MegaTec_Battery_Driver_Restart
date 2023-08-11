@@ -13,4 +13,6 @@ The UPS will connect again, and this must be done everytime you boot up.
 
 Since the pc asks to restart after changing the device enable/disable
 
-you will get an error if running it more than once without restarting
+You will get an error `The data is invalid` if running it more than once without restarting (*sometimes also running for the first time)
+
+It will also only successfully change the driver once after a restart but the toggle does work.
