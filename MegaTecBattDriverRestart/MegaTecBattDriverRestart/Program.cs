@@ -1,7 +1,7 @@
 ﻿using System;
 using System.IO;
 using static MegaTecBattDriverRestart.DisableDevice;
-using static MegaTecBattDriverRestart.DisableDevice2;
+using static MegaTecBattDriverRestart.DisableDeviceToggle;
 
 namespace MegaTecBattDriverRestart
 {
@@ -85,7 +85,7 @@ namespace MegaTecBattDriverRestart
         public static void Toggle(Guid classGuid, string instanceId)
         {
             LoggerClass.WriteLine(" *** Toggle Called [Program] ***");
-            DeviceHelper2.ToggleDeviceEnabled(classGuid, instanceId);
+            DeviceHelperToggle.ToggleDeviceEnabled(classGuid, instanceId);
         }
 
         public static void DisableorEnable(Guid classGuid, string instanceId, bool enable)
@@ -99,7 +99,7 @@ namespace MegaTecBattDriverRestart
             LoggerClass.WriteLine(" *** ToggleMegaTec Called [Program] ***");
             Guid classGuid = new Guid("{745a17a0-74d3-11d0-b6fe-00a0c90f57da}");
             string instanceId = @"HID\VID_0001&PID_0000\6&7EFA158&0&0000";
-            DeviceHelper2.ToggleDeviceEnabled(classGuid, instanceId);
+            DeviceHelperToggle.ToggleDeviceEnabled(classGuid, instanceId);
         }
 
         public static void Disab()

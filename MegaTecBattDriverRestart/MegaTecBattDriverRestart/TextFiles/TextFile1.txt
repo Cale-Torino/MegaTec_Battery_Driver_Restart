@@ -3,5 +3,7 @@ Run as admin in order to control drivers.
 
 enable disable driver.
 
+Run with batch file to easily use the different switches.
+
 TODO:
 toggle enable/disable

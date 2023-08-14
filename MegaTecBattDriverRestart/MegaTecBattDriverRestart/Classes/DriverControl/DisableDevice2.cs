@@ -9,7 +9,7 @@ using System.Text;
 
 namespace MegaTecBattDriverRestart
 {
-    internal class DisableDevice2
+    internal class DisableDeviceToggle
     {
         [Flags()]
         internal enum SetupDiGetClassDevsFlags
@@ -247,10 +247,10 @@ ref PropertyChangeParameters classInstallParams, int classInstallParamsSize);
 
         }
 
-        public sealed class DeviceHelper2
+        public sealed class DeviceHelperToggle
         {
 
-            private DeviceHelper2()
+            private DeviceHelperToggle()
             {
             }
 
