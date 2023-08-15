@@ -58,8 +58,8 @@
     <Compile Include="Classes\DriverControl\DisableDevice2.cs" />
     <Compile Include="Classes\DriverControl\DisableHardwareClass.cs" />
     <Compile Include="Classes\Logs\LoggerClass.cs" />
-    <Compile Include="Classes\ErrorClass.cs" />
-    <Compile Include="Classes\PauseClass.cs" />
+    <Compile Include="Classes\Control\ErrorClass.cs" />
+    <Compile Include="Classes\Control\PauseClass.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
