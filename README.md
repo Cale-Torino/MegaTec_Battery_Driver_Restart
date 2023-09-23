@@ -4,7 +4,7 @@
 
 This application was made for the old **MegaTec UPS** devices that use the *UPSilion* software.
 
-Using Windows 11 with the UPSilion software works however every time the PC boots up 
+Using Windows 11 with the UPSilion software works however when plugged in to USB3.0/USB.3.1 every time the PC boots up 
 you will get an error "The UPS device has been disconected"
 
 Now if you toggle the driver enable/disable in the `computer managment` > `Device Manager` > `HID-compliant` device *VID_0001* & *PID_0000*
